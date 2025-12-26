@@ -48,7 +48,7 @@ jobs:
       - name: Deploy to instances
         run: |
           for ip in ${{ steps.ips.outputs.list }}; do
-            echo "Deploying to $ip"
+            echo "Deploying  to $ip"
             
             scp -i key.pem -o StrictHostKeyChecking=no \
               index.html ubuntu@$ip:/tmp/index.html
